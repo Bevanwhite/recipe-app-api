@@ -90,3 +90,41 @@ in this course we going to focus to bankend
         * setup credentials
         * login before running job
         * get 200 pulls / 6hr for free
+
+* using docker with django?
+    * many benefits 
+        * consistent dev and prod environment
+        * easier collaboration
+        * capture all dependencies as code
+        * easier cleanup 
+        * save a lot of time
+
+    * drawbacks
+        * vscode unable to access interpreter
+        * more difficult to use integrated features
+        * suggest using terminal
+
+* How to config docker?
+    * create a dockerfile
+    * lists steps for creating image
+        * choose a base image (python)
+        * install dependencies
+        * steup users
+
+* what is docker compose?
+    * how our docker image(s) should be used.
+    * define our 'services'
+        * name
+        * port mappings
+        * volume mappings
+
+* how to use docker compose? 
+    * run all commands through docker compose
+    * `docker-compose run -rm app sh -c "python manage.py collectstatic"`
+    * `docker-compose` runs a docker compose command
+    * `run` will start a specific container defined in config
+    * `--rm` removesthe container
+    * `app` is the name of the service
+    * `sh -c` passes in a shell command
+    * command to run inside container `sh -c "python manage.py collectstatic"`
+    * this called docker compose syntax `docker-compose run -rm app`
