@@ -1,3 +1,6 @@
+# recipe-app-api
+Recipe API project
+
 Hey guys going to create django-api using tutorial video 
 
 Creating a recipe api
