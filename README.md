@@ -1,5 +1,5 @@
 # recipe-app-api
-Recipe API project
+Recipe API project by Mark Winterbottom
 
 Hey guys going to create django-api using tutorial video 
 

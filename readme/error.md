@@ -9,3 +9,6 @@
     * `DockerFile`(this will not work),  `Dockerfile`(this will work)
 4. `failed to compute cache key: "/app" not found: not found`
     * for this create folder in the working directory
+5. `[ $DEV = "true"]` ?
+    * `sh: flake8: not found` this will give you this error
+    * `[ $DEV = "true" ]` have the space that will go away
