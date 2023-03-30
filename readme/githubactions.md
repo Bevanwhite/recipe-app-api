@@ -34,4 +34,9 @@
     * use dosker login during our job
     * add secrects to github projects
     * secrects are encrypted
-
+6. what does the checks.yml file do?
+    * this is a github actions workflow file that defines a job named "test-lint" which runs on a push eventon any branch. the job runs on an job runs on an ubuntu 20.04 virtual machine and consists of for steps:
+        1.  login to docker hub using the docker/login-action@v1 action.it uses the docker hub username and access token stored in github secrets.
+        2. checkout the current repository code the actions/checkout@v2 action.
+        3. run tests using the "docker-compose run" command to execute the "python manage.py test" command in a docker container
+        4. run a linting tool using the "docker compose run" command to execute the "flake8" command in a docker container 
