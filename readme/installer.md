@@ -27,3 +27,19 @@ what the code say in docker file?
     * `django-user` is the username of the alpine image
 * `ENV PATH="/py/bin:$PATH"` in this we add python to path file in linux so it can run automatically
 * `docker build .` will run the docker file
+
+what is `docker-compose.yml` file does ?
+
+* `version: "3.9"` this docker-compose syntax that we are using that specific version of syntax 
+* so when new version get released it won't break this version
+*  docker compose file contain one or move service.
+* `app:` this is the name of our service
+* ```build: \n context: .``` 
+    * build docker file inside our currrent directory 
+    * context it start from the root 
+* `ports: \n - "8000:8000"` 
+    * it maps port 8000 in our local amchine to port 8000 in the docker container
+* `volumes: ` directory that mapping from the local mahine to the docker container
+    * why do we do that ?  because we need update our local code with our docker container 
+* `command: ` command that us used to run the service
+* then after you finish creating the file run `docker-compose build` to run the docker-compose.yml file
