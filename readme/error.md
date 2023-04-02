@@ -12,3 +12,5 @@
 5. `[ $DEV = "true"]` ?
     * `sh: flake8: not found` this will give you this error
     * `[ $DEV = "true" ]` have the space that will go away
+6. `services.db Additional property enviorment is not allowed`
+    * you have to change `enviorment` to `environment`
