@@ -14,3 +14,14 @@
     * `[ $DEV = "true" ]` have the space that will go away
 6. `services.db Additional property enviorment is not allowed`
     * you have to change `enviorment` to `environment`
+7. problem with docker compose
+    * using `depends_on` ensures service starts but doesn't ensure application is running
+    * solution for this?
+        * make django "wait for db"
+            * check for database availability
+            * continue when database ready
+        * create custom django management command
+    * when is this an issue?
+        * running docker-compose locally
+        * running on deployed environment
+        
