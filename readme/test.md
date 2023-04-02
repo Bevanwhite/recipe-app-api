@@ -75,3 +75,26 @@
         * MagicMock / Mock - replace real objects
         * patch - overrides code for tests
 
+11. how to do tesing api?
+    * make actual requests
+    * check result
+    * using Django Rest framework apiclient
+        * based on the django's TestClient
+        * make requests
+        * check result
+        * override authentication
+        
+12. how to use the APIClient 
+    * import APIClient
+    * create client
+    * make request
+    * check result
+
+13. common issue
+    * tests not running
+    * ran less test than you have 
+        * missing `__init__.py`in `tests/` dir
+        * indentation of test cases
+        * missing `test` prefix for method
+    * `ImportError` when running tests
+        * when you have `tests/` dir and `tests.py` module 
