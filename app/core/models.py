@@ -26,13 +26,15 @@ class UserManager(BaseUserManager):
         """create, save and return a new superuser"""
         if not email:
             raise ValueError('usermusthave an email address.')
-        superuser = self.model(email=self.normalize_email(email), **extra_field)
+        superuser = self.model(
+            email=self.normalize_email(email), **extra_field)
         superuser.set_password(password)
         superuser.is_staff = True
         superuser.is_superuser = True
         superuser.save(using=self.db)
 
         return superuser
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the system."""
