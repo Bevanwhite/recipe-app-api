@@ -13,5 +13,4 @@ class UserAdmin(BaseUserAdmin):
     list_display = ['email', 'name']
 
 
-
 admin.site.register(models.User, UserAdmin)
